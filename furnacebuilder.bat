@@ -6,4 +6,5 @@ cd furnace
 mkdir build
 cd build
 cmake -G "Unix Makefiles" ..
-make -j8
+echo now run 'make' in your command prompt
+exit /b
