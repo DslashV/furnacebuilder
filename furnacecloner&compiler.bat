@@ -1,11 +1,31 @@
 @echo off
-rem downloads furnace using git 
+rem ===============================
+rem Clone Furnace from GitHub
+rem ===============================
 git clone --recursive https://github.com/tildearrow/furnace.git
-rem cd to the furnace dir and makes build folder and builds and complies using cmake and make
+
+rem ===============================
+rem Enter Furnace directory
+rem ===============================
 cd furnace
-IF EXIST "BUILD/" MKDIR BUILD
+
+rem ===============================
+rem Create build folder if missing
+rem ===============================
+if not exist "build" mkdir build
+
+rem ===============================
+rem Enter build folder and configure
+rem ===============================
 cd build
 cmake -G "Unix Makefiles" ..
-echo now run 'make' in your command prompt
-exit /b
 
+rem ===============================
+rem Next step: Compile Furnace
+rem ===============================
+echo.
+echo Build configuration complete!
+echo Now run: make
+echo.
+
+exit /b
