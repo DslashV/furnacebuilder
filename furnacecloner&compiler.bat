@@ -1,5 +1,10 @@
 @echo off
 rem ===============================
+rem check if you've already used this batch file
+rem ===============================
+if exist "furnace" echo you've already used this program once, exiting the program && exit /b
+
+rem ===============================
 rem Clone Furnace from GitHub
 rem ===============================
 git clone --recursive https://github.com/tildearrow/furnace.git
@@ -29,3 +34,4 @@ echo Now run: make
 echo.
 
 exit /b
+
