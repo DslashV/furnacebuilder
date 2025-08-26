@@ -2,7 +2,7 @@
 rem ===============================
 rem check if you've already used this batch file
 rem ===============================
-if exist "furnace" echo you've already used this program once, exiting...... && exit /b
+if exist "furnace" echo you've already used this program once, exiting && exit /b
 
 rem ===============================
 rem Clone Furnace from GitHub
@@ -34,5 +34,6 @@ echo Now run: make
 echo.
 
 exit /b
+
 
 
